@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberVerse | Phishing Lab</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cyber-bg"></div>
+  <div class="scanline"></div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>CyberVerse</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="password.html">Password</a>
+      <a href="phishing.html" class="active">Phishing Lab</a>
+      <a href="toolkit.html">Toolkit</a>
+      <a href="dashboard.html">SOC Dashboard</a>
+      <a href="career.html">Career Path</a>
+      <a href="about-contact.html">About & Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="section-title reveal">
+        <p class="eyebrow">Phishing Lab</p>
+        <h1>Train. Analyze. Test Yourself.</h1>
+        <p>Practice phishing detection, check pasted emails, and complete a 30-question cyber awareness quiz.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cyber-panel reveal">
+        <h2>1. Phishing Detection Trainer</h2>
+        <p class="muted">Decide whether the shown message is legitimate or phishing.</p>
+
+        <div class="trainer-card" id="trainerCard">
+          <h3 id="trainerTitle">Training scenario will appear here</h3>
+          <p id="trainerText">Click Start Trainer to begin.</p>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn primary" id="startTrainerBtn">Start Trainer</button>
+          <button class="btn" id="legitBtn">Legit</button>
+          <button class="btn" id="phishingBtn">Phishing</button>
+        </div>
+
+        <div class="terminal-output" id="trainerFeedback">Trainer feedback will appear here.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cyber-panel reveal">
+        <h2>2. Real-Time Phishing Email Checker</h2>
+        <p class="muted">
+          Paste an email below. CyberVerse will analyze sender clues, urgency, links,
+          credential requests, grammar patterns, and suspicious language.
+        </p>
+
+        <div class="form-group">
+          <label for="emailSender">Sender Email</label>
+          <input type="text" id="emailSender" placeholder="example: support@paypa1-security.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="emailSubject">Email Subject</label>
+          <input type="text" id="emailSubject" placeholder="example: Your account will be suspended" />
+        </div>
+
+        <div class="form-group">
+          <label for="emailBody">Email Body</label>
+          <textarea id="emailBody" rows="9" placeholder="Paste email content here..."></textarea>
+        </div>
+
+        <button class="btn primary" id="analyzeEmailBtn">Analyze Email</button>
+
+        <div class="analysis-grid">
+          <div class="mini-card">
+            <small>Risk Score</small>
+            <strong id="emailRiskScore">0%</strong>
+          </div>
+          <div class="mini-card">
+            <small>Verdict</small>
+            <strong id="emailVerdict">Waiting</strong>
+          </div>
+          <div class="mini-card">
+            <small>Detected Flags</small>
+            <strong id="emailFlagCount">0</strong>
+          </div>
+        </div>
+
+        <div class="terminal-output" id="emailAnalysisResult">
+          Analysis report will appear here.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cyber-panel reveal">
+        <h2>3. Cyber Awareness Quiz</h2>
+        <p class="muted">
+          The quiz selects 30 unique questions from a 150+ question bank:
+          8 Easy, 10 Medium, and 12 Hard.
+        </p>
+
+        <div id="quizStartBox">
+          <button class="btn glow" id="startQuizBtn">Start 30-Question Quiz</button>
+        </div>
+
+        <div id="quizBox" class="quiz-box hidden">
+          <div class="quiz-top">
+            <span id="quizCounter">Question 1/30</span>
+            <span id="quizDifficulty">Easy</span>
+          </div>
+
+          <div class="progress-track">
+            <div class="progress-fill" id="quizProgress"></div>
+          </div>
+
+          <h3 id="quizQuestion">Question text</h3>
+          <div class="quiz-options" id="quizOptions"></div>
+
+          <div class="terminal-output" id="quizExplanation"></div>
+          <button class="btn primary hidden" id="nextQuestionBtn">Next Question</button>
+        </div>
+
+        <div id="quizResultBox" class="quiz-result hidden">
+          <h2>System Analysis Complete</h2>
+          <div class="analysis-grid">
+            <div class="mini-card">
+              <small>Final Score</small>
+              <strong id="finalQuizScore">0/30</strong>
+            </div>
+            <div class="mini-card">
+              <small>Percentage</small>
+              <strong id="finalQuizPercent">0%</strong>
+            </div>
+            <div class="mini-card">
+              <small>Awareness Level</small>
+              <strong id="finalQuizLevel">Beginner</strong>
+            </div>
+          </div>
+
+          <div class="terminal-output" id="quizSystemMessages"></div>
+
+          <a href="career.html" class="btn glow hidden" id="learnNextBtn">See what to learn next</a>
+          <button class="btn" id="retryQuizBtn">Retry Quiz</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Sheikh Iftekharul Islam | CyberVerse</p>
+    <div>
+      <a href="career.html">Career Path</a>
+      <a href="https://github.com/sheikhmahi4000/" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/sheikh-iftekharul-islam-87b0a2382/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+ <script src="js/script.js"></script>
+</body>
+</html>

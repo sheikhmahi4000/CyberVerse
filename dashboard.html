@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberVerse | SOC Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cyber-bg"></div>
+  <div class="scanline"></div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>CyberVerse</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="password.html">Password</a>
+      <a href="phishing.html">Phishing Lab</a>
+      <a href="toolkit.html">Toolkit</a>
+      <a href="dashboard.html" class="active">SOC Dashboard</a>
+      <a href="career.html">Career Path</a>
+      <a href="about-contact.html">About & Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="section-title reveal">
+        <p class="eyebrow">SOC Dashboard</p>
+        <h1>Session Security Monitoring</h1>
+        <p>Analyze your browser session, device signals, user activity, alerts, and risk score.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="dashboard-grid">
+        <div class="mini-card reveal">
+          <small>Session Status</small>
+          <strong id="sessionStatus">Active</strong>
+        </div>
+        <div class="mini-card reveal">
+          <small>Risk Level</small>
+          <strong id="socRiskLevel">Low</strong>
+        </div>
+        <div class="mini-card reveal">
+          <small>Activity Count</small>
+          <strong id="activityCount">0</strong>
+        </div>
+        <div class="mini-card reveal">
+          <small>Monitoring</small>
+          <strong>Enabled</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soc-layout">
+      <div class="cyber-panel reveal">
+        <h2>Visitor Intelligence</h2>
+        <ul class="intel-list">
+          <li><span>Browser:</span> <strong id="browserInfo">Detecting...</strong></li>
+          <li><span>OS:</span> <strong id="osInfo">Detecting...</strong></li>
+          <li><span>Device Type:</span> <strong id="deviceTypeInfo">Detecting...</strong></li>
+          <li><span>Screen:</span> <strong id="screenInfo">Detecting...</strong></li>
+          <li><span>Language:</span> <strong id="languageInfo">Detecting...</strong></li>
+          <li><span>Timezone:</span> <strong id="timezoneInfo">Detecting...</strong></li>
+        </ul>
+      </div>
+
+      <div class="cyber-panel reveal">
+        <h2>IP Intelligence</h2>
+        <button class="btn primary" id="loadIpIntelBtn">Load IP Intelligence</button>
+        <div class="terminal-output" id="socIpOutput">
+          IP data will appear here.
+        </div>
+      </div>
+    </section>
+
+    <section class="section soc-layout">
+      <div class="cyber-panel reveal">
+        <h2>Activity Timeline</h2>
+        <div class="terminal-output log-box" id="activityLog">
+          [SYSTEM] Monitoring active...
+        </div>
+      </div>
+
+      <div class="cyber-panel reveal">
+        <h2>Alert Center</h2>
+        <div class="alert-list" id="alertList">
+          <div class="alert-item">
+            <strong>[INFO]</strong>
+            Session initialized successfully.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cyber-panel reveal">
+        <h2>Investigation Panel</h2>
+        <p class="muted">Click alerts in future upgrades to inspect severity, cause, and recommendation.</p>
+        <div class="terminal-output" id="investigationPanel">
+          No active investigation selected.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Sheikh Iftekharul Islam | CyberVerse</p>
+    <div>
+      <a href="career.html">Career Path</a>
+      <a href="https://github.com/sheikhmahi4000/" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/sheikh-iftekharul-islam-87b0a2382/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

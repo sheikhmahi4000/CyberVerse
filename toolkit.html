@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberVerse | Cyber Toolkit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cyber-bg"></div>
+  <div class="scanline"></div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>CyberVerse</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="password.html">Password</a>
+      <a href="phishing.html">Phishing Lab</a>
+      <a href="toolkit.html" class="active">Toolkit</a>
+      <a href="dashboard.html">SOC Dashboard</a>
+      <a href="career.html">Career Path</a>
+      <a href="about-contact.html">About & Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="section-title reveal">
+        <p class="eyebrow">Cyber Toolkit</p>
+        <h1>Security Utility Hub</h1>
+        <p>Use practical cybersecurity tools for encoding, hashing, password generation, IP lookup, URL handling, and JWT decoding.</p>
+      </div>
+    </section>
+
+    <section class="section toolkit-layout">
+      <aside class="tool-sidebar reveal">
+        <button class="tool-tab active" data-tool="hashTool">Hash Generator</button>
+        <button class="tool-tab" data-tool="base64Tool">Base64 Tool</button>
+        <button class="tool-tab" data-tool="passwordGenTool">Password Generator</button>
+        <button class="tool-tab" data-tool="ipTool">IP Info Viewer</button>
+        <button class="tool-tab" data-tool="urlTool">URL Encoder/Decoder</button>
+        <button class="tool-tab" data-tool="jwtTool">JWT Decoder</button>
+        <button class="tool-tab" data-tool="compareHashTool">Hash Compare</button>
+      </aside>
+
+      <div class="tool-content reveal">
+        <section class="cyber-panel tool-screen active" id="hashTool">
+          <h2>Hash Generator</h2>
+          <textarea id="hashInput" rows="5" placeholder="Enter text to hash..."></textarea>
+          <button class="btn primary" id="generateHashBtn">Generate Hash</button>
+          <div class="terminal-output" id="hashOutput">Hash output will appear here.</div>
+        </section>
+
+        <section class="cyber-panel tool-screen" id="base64Tool">
+          <h2>Base64 Encoder / Decoder</h2>
+          <textarea id="base64Input" rows="5" placeholder="Enter text..."></textarea>
+          <div class="hero-actions">
+            <button class="btn primary" id="encodeBase64Btn">Encode</button>
+            <button class="btn" id="decodeBase64Btn">Decode</button>
+          </div>
+          <div class="terminal-output" id="base64Output">Base64 output will appear here.</div>
+        </section>
+
+        <section class="cyber-panel tool-screen" id="passwordGenTool">
+          <h2>Password Generator</h2>
+          <input type="number" id="passwordLength" value="16" min="8" max="64" />
+          <button class="btn primary" id="generatePasswordBtn">Generate Password</button>
+          <div class="terminal-output" id="generatedPassword">Generated password will appear here.</div>
+        </section>
+
+        <section class="cyber-panel tool-screen" id="ipTool">
+          <h2>IP Info Viewer</h2>
+          <p class="muted">Enter an IP address or leave empty to check your public IP.</p>
+          <input type="text" id="ipInput" placeholder="example: 8.8.8.8" />
+          <button class="btn primary" id="lookupIpBtn">Lookup IP</button>
+          <div class="terminal-output" id="ipOutput">IP information will appear here.</div>
+        </section>
+
+        <section class="cyber-panel tool-screen" id="urlTool">
+          <h2>URL Encoder / Decoder</h2>
+          <textarea id="urlInput" rows="5" placeholder="Enter URL or text..."></textarea>
+          <div class="hero-actions">
+            <button class="btn primary" id="encodeUrlBtn">Encode URL</button>
+            <button class="btn" id="decodeUrlBtn">Decode URL</button>
+          </div>
+          <div class="terminal-output" id="urlOutput">URL output will appear here.</div>
+        </section>
+
+        <section class="cyber-panel tool-screen" id="jwtTool">
+          <h2>JWT Decoder</h2>
+          <textarea id="jwtInput" rows="5" placeholder="Paste JWT token..."></textarea>
+          <button class="btn primary" id="decodeJwtBtn">Decode JWT</button>
+          <div class="terminal-output" id="jwtOutput">Decoded JWT will appear here.</div>
+        </section>
+
+        <section class="cyber-panel tool-screen" id="compareHashTool">
+          <h2>Text Hash Compare</h2>
+          <input type="text" id="hashCompareText" placeholder="Enter original text" />
+          <input type="text" id="hashCompareValue" placeholder="Enter hash to compare" />
+          <button class="btn primary" id="compareHashBtn">Compare SHA-256</button>
+          <div class="terminal-output" id="compareHashOutput">Comparison result will appear here.</div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Sheikh Iftekharul Islam | CyberVerse</p>
+    <div>
+      <a href="career.html">Career Path</a>
+      <a href="https://github.com/sheikhmahi4000/" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/sheikh-iftekharul-islam-87b0a2382/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+<script src="js/script.js"></script>
+</body>
+</html>
